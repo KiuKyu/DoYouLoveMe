@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #container {
+            position: relative;
+        }
+        #runAway {
+            position: absolute;
+            top: auto;
+            left: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Do you love me?</h1>
+        <button onclick="agree()">Yes</button>
+        <button id="runAway" onmouseover="disagree()">No</button>
+    </div>
+</body>
+<script>
+    let mHeight = 800;
+    let mWidth = 400;
+    let runAway = document.getElementById('runAway');
+
+    function agree() {
+        alert('<3');
+    }
+    function disagree() {
+        let randLeft = Math.random() * mWidth;
+        let randTop = Math.random() * mHeight;
+        runAway.style.left = randLeft + 'px';
+        runAway.style.top = randTop + 'px';
+    }
+</script>
+
+</html>
